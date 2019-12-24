@@ -1,5 +1,5 @@
 //
-//  MPZPLAYAdsBannerCustomEvent.h
+//  AtmosplayBannerCustomEvent.h
 //  PlayableMopubAd
 //
 //  Created by Michael Tang on 2019/10/31.
@@ -10,9 +10,7 @@
 #import "MPBannerCustomEvent.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
-@interface MPZPLAYAdsBannerCustomEvent : MPBannerCustomEvent
+@interface AtmosplayBannerCustomEvent : MPBannerCustomEvent
 
 @end
-
 NS_ASSUME_NONNULL_END
