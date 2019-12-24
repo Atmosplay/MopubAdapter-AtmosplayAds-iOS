@@ -6,6 +6,7 @@ target 'PlayableMopubAd' do
   use_frameworks!
   #pod 'MoPub-AtmosplayAds-Adapters'
   pod "MoPub-AtmosplayAds-Adapters", :path => "./MoPub-AtmosplayAds-Adapters.podspec"
+  pod 'AppCenter'
   
   target 'PlayableMopubAdTests' do
     inherit! :search_paths

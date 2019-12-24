@@ -1,4 +1,12 @@
 PODS:
+  - AppCenter (2.5.3):
+    - AppCenter/Analytics (= 2.5.3)
+    - AppCenter/Crashes (= 2.5.3)
+  - AppCenter/Analytics (2.5.3):
+    - AppCenter/Core
+  - AppCenter/Core (2.5.3)
+  - AppCenter/Crashes (2.5.3):
+    - AppCenter/Core
   - AtmosplayAds (3.0.0)
   - MoPub-AtmosplayAds-Adapters (3.0.0):
     - AtmosplayAds (~> 3.0.0)
@@ -16,10 +24,12 @@ PODS:
     - mopub-ios-sdk/Moat
 
 DEPENDENCIES:
+  - AppCenter
   - MoPub-AtmosplayAds-Adapters (from `./MoPub-AtmosplayAds-Adapters.podspec`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - AppCenter
     - AtmosplayAds
     - mopub-ios-sdk
 
@@ -28,10 +38,11 @@ EXTERNAL SOURCES:
     :path: "./MoPub-AtmosplayAds-Adapters.podspec"
 
 SPEC CHECKSUMS:
+  AppCenter: 765ff38c4d360fc5ec61b61a8be24d74cd6d4d83
   AtmosplayAds: 1391ac3062e39045b98a82e0ff7fb2b6b7841956
   MoPub-AtmosplayAds-Adapters: 9a4590d92a3819497ded3a3df6063d239f9f4b56
   mopub-ios-sdk: 3d65133b95b6498aa871a66818a11a5ba307e565
 
-PODFILE CHECKSUM: 8df4f10f4015c7b34580f7520e00cce77a6a3b5d
+PODFILE CHECKSUM: cefbc6b59bb9302358e354f89d9aeec325958801
 
 COCOAPODS: 1.8.4
