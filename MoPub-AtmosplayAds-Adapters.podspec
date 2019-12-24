@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/Atmosplay/MopubAdapter-AtmosplayAds-iOS.git', :tag => s.version.to_s}
   s.source_files = 'PlayableMopubAd/Adapters/*.{h,m}'
   s.ios.deployment_target = '9.0'
-  s.dependency 'Atmosplay', '~> 3.0.0'
+  s.dependency 'AtmosplayAds', '~> 3.0.0'
   s.dependency 'mopub-ios-sdk'
   s.static_framework = true
   
