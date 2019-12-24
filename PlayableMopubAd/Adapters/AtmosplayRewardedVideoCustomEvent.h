@@ -8,8 +8,7 @@
 
 #import "MPRewardedVideoCustomEvent.h"
 
-@interface MPZPLAYAdsRewardedVideoCustomEvent : MPRewardedVideoCustomEvent
-
+@interface AtmosplayRewardedVideoCustomEvent : MPRewardedVideoCustomEvent
 
 @end
 
