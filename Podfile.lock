@@ -1,7 +1,8 @@
 PODS:
-  - MoPub-AtmosplayAds-Adapters (2.6.0):
+  - AtmosplayAds (3.0.0)
+  - MoPub-AtmosplayAds-Adapters (3.0.0):
+    - AtmosplayAds (~> 3.0.0)
     - mopub-ios-sdk
-    - PlayableAds (~> 2.6.0)
   - mopub-ios-sdk (5.10.0):
     - mopub-ios-sdk/MoPubSDK (= 5.10.0)
   - mopub-ios-sdk/Avid (5.10.0):
@@ -13,21 +14,24 @@ PODS:
     - mopub-ios-sdk/Avid
     - mopub-ios-sdk/Core
     - mopub-ios-sdk/Moat
-  - PlayableAds (2.6.0)
 
 DEPENDENCIES:
-  - MoPub-AtmosplayAds-Adapters
+  - MoPub-AtmosplayAds-Adapters (from `./MoPub-AtmosplayAds-Adapters.podspec`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - MoPub-AtmosplayAds-Adapters
+  https://github.com/CocoaPods/Specs.git:
+    - AtmosplayAds
     - mopub-ios-sdk
-    - PlayableAds
+
+EXTERNAL SOURCES:
+  MoPub-AtmosplayAds-Adapters:
+    :path: "./MoPub-AtmosplayAds-Adapters.podspec"
 
 SPEC CHECKSUMS:
-  mopub-ios-sdk: b63e15803e70b92d0b51c3e1c49bbcd78cd3d1d5
-  PlayableAds: 19788ba6d0b208d4711660216b2426607adc1948
+  AtmosplayAds: 1391ac3062e39045b98a82e0ff7fb2b6b7841956
+  MoPub-AtmosplayAds-Adapters: 9a4590d92a3819497ded3a3df6063d239f9f4b56
+  mopub-ios-sdk: 3d65133b95b6498aa871a66818a11a5ba307e565
 
-PODFILE CHECKSUM: 189d5b4d8a8b2e777a69420b2e8f66e3a33a7795
+PODFILE CHECKSUM: 8df4f10f4015c7b34580f7520e00cce77a6a3b5d
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.4
