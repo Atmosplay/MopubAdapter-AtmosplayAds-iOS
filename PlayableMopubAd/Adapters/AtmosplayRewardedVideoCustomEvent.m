@@ -19,7 +19,7 @@
 
 @implementation AtmosplayRewardedVideoCustomEvent
 - (void)requestRewardedVideoWithCustomEventInfo:(NSDictionary *)info adMarkup:(NSString *)adMarkup {
-    NSString *appID =  [info objectForKey:@"APPID"];
+    NSString *appID =  [info objectForKey:@"AppID"];
     appID = [appID stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     NSString *adUnitID = [info objectForKey:@"AdUnitID"];
     adUnitID = [adUnitID stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
