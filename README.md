@@ -30,3 +30,52 @@ $ pod install --repo-update
 如果您刚开始接触 CocoaPods，请参阅其[官方文档](https://guides.cocoapods.org/using/using-cocoapods)，了解如何创建和使用 Podfile。
 
 # Mopub后台配置指南
+
+请按照如下步骤进行custom event配置。
+
+1. 选择Networks，然后点击New network。
+
+<img src='resources/new_network.png'>
+
+2. 选择Custom SDK network。
+
+<img src='resources/custom_sdk_network.png'>
+
+3. 配置类名及参数
+
+   - Atmosplay类名
+
+     - Banner 
+     
+     ```
+     AtmosplayBannerCustomEvent
+     ```
+
+     - Interstitial
+     
+     ```
+     AtmosplayInterstitialCustomEvent
+     ```
+
+     - RewardedVideo
+     
+     ```
+     AtmosplayRewardedVideoCustomEvent
+     ```
+   
+   - Parameter使用json格式，参数中不能含有空格，注意大小写，具体格式参考下方说明。
+
+   ```
+   {"AppID":"YOUR_APP_ID","AdUnitID":"YOUR_ADUNIT_ID"}
+   ```
+
+<img src='resources/app_adunit_setup.png'>
+
+# TestID
+
+| Ad Format     | App_ID                               | Ad_Unit_id                           |
+| ------------- | ------------------------------------ | ------------------------------------ |
+| RewardedVideo | A650AB0D-7BFC-2A81-3066-D3170947C3DA | BAE5DAAC-04A2-2591-D5B0-38FA846E45E7 |
+| Interstitial  | A650AB0D-7BFC-2A81-3066-D3170947C3DA | 0868EBC0-7768-40CA-4226-F9924221C8EB |
+| Banner        | A650AB0D-7BFC-2A81-3066-D3170947C3DA | A49521F3-339D-994F-FC80-F9C4170AA0CF |
+
