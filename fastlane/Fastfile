@@ -16,28 +16,30 @@
 default_platform(:ios)
 
 platform :ios do
-  desc "Submit a new Beta Build to HockeyApp"
-  lane :mopub do
-  	next if ENV["CI"]
+  desc "Submit a new Beta Build to App Center"
+  lane :pushToAppCenter do
+    xcversion(version: "11.1")
+
     # Build
     gym(
       scheme: "PlayableMopubAd",
       workspace: "PlayableMopubAd.xcworkspace",
       configuration: "Release",
       clean: true,
+      include_bitcode: false,
       include_symbols: true,
-      export_method: "enterprise"
+      export_method: "enterprise",
     )
 
-    # Push to HockeyApp
-    hockey(
-      api_token: "b23874100f5346cdb613ca63c57393eb",
-      public_identifier: '369fdb7db11d4fa6997b1d24203d5a7f',
-      notify: "1",
-      status: "2",
-      commit_sha: ENV["TRAVIS_COMMIT"],
-      notes: ENV["TRAVIS_COMMIT_MESSAGE"],
-      timeout: 300
-    )
+    # push to App Center
+    appcenter_upload(
+      api_token: "432d532f9c8d234a64d9ffc626d81ba5f9646dae",
+      owner_name: "Atmosplay",
+      app_name: "MopubAdapter-AtmosplayAds-iOS",
+      ipa: "./PlayableMopubAd.ipa",
+      dsym: "./PlayableMopubAd.app.dSYM.zip",
+      release_notes: '',
+      notify_testers: true # Set to false if you don't want to notify testers of your new release (default: `false`)
+  )
   end
 end
