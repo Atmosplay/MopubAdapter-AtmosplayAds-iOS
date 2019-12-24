@@ -1,5 +1,5 @@
 //
-//  MPZPLAYAdsInterstitialCustomEvent.h
+//  AtmosplayInterstitialCustomEvent.h
 //  PlayableMopubAd
 //
 //  Created by lgd on 2018/4/10.
@@ -12,6 +12,6 @@
     #import "MPInterstitialCustomEvent.h"
 #endif
 
-@interface MPZPLAYAdsInterstitialCustomEvent : MPInterstitialCustomEvent
+@interface AtmosplayInterstitialCustomEvent : MPInterstitialCustomEvent
 
 @end
