@@ -21,13 +21,18 @@
     NSString *adUnitID = [info objectForKey:@"AdUnitID"];
     adUnitID = [adUnitID stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     
-    self.banner = [[AtmosplayBanner alloc] initWithAppID:appID adUnitID:adUnitID  rootViewController:[self.delegate viewControllerForPresentingModalView]];
-    self.banner.delegate = self;
-    self.banner.bannerSize = kAtmosplayBanner320x50;
-    if (size.width == 728) {
-        self.banner.bannerSize = kAtmosplayBanner728x90;
-    }
-    [self.banner loadAd];
+    __weak __typeof(self)weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        weakSelf.banner = [[AtmosplayBanner alloc] initWithAppID:appID
+                                                        adUnitID:adUnitID
+                                              rootViewController:[self.delegate viewControllerForPresentingModalView]];
+        weakSelf.banner.delegate = self;
+        weakSelf.banner.bannerSize = kAtmosplayBanner320x50;
+        if (size.width == 728) {
+            weakSelf.banner.bannerSize = kAtmosplayBanner728x90;
+        }
+        [weakSelf.banner loadAd];
+    });
 }
 
 #pragma mark: AtmosplayBannerDelegate
@@ -52,6 +57,15 @@
     }
     if ([self.delegate respondsToSelector:@selector(bannerCustomEventDidFinishAction:)]) {
         [self.delegate bannerCustomEventDidFinishAction:self];
+    }
+}
+    
+- (void)dealloc {
+    if (self.banner.delegate) {
+        self.banner.delegate = nil;
+    }
+    if (self.banner) {
+        self.banner = nil;
     }
 }
 
