@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "MoPub.h"
+@import AppCenter;
+@import AppCenterAnalytics;
+@import AppCenterCrashes;
 
 @interface AppDelegate ()
 
@@ -20,6 +23,10 @@
     [[MoPub sharedInstance]  initializeSdkWithConfiguration:sdkConfig completion:^{
         NSLog(@"SDK initialization complete");
     }];
+    [MSAppCenter start:@"3c8fbeff-5698-42d6-b107-214e8e38af35" withServices:@[
+      [MSAnalytics class],
+      [MSCrashes class]
+    ]];
     
     return YES;
 }
