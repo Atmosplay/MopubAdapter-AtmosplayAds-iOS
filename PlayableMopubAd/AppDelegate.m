@@ -14,11 +14,9 @@
 @end
 
 @implementation AppDelegate
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization:@"e799f7867d614fdd99a7917833e91643"];
+    MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization:@"1e3656f9129a4d888e78ab5f5da4979e"];
     [[MoPub sharedInstance]  initializeSdkWithConfiguration:sdkConfig completion:^{
         NSLog(@"SDK initialization complete");
     }];
