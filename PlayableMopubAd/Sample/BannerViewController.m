@@ -24,13 +24,11 @@
 }
 
 - (IBAction)initBanner:(UIButton *)sender {
-   
     if (!self.adView) {
-        self.adView = [[MPAdView alloc] initWithAdUnitId:@"85f2445631834a318843580ee46000fb" size:MOPUB_BANNER_SIZE];
+        self.adView = [[MPAdView alloc] initWithAdUnitId:@"1e3656f9129a4d888e78ab5f5da4979e"];
         self.adView.delegate = self;
-        self.adView.frame = CGRectMake((self.view.bounds.size.width - MOPUB_BANNER_SIZE.width) / 2,
-                                         self.view.bounds.size.height - MOPUB_BANNER_SIZE.height- 34,
-                                         MOPUB_BANNER_SIZE.width, MOPUB_BANNER_SIZE.height);
+        self.adView.frame = CGRectMake((self.view.bounds.size.width - 320) / 2,
+        self.view.bounds.size.height - 50 - 34, 320, 50);
         [self.view addSubview:self.adView];
     }
     // banner auto refresh

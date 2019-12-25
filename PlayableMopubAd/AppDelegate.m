@@ -8,20 +8,25 @@
 
 #import "AppDelegate.h"
 #import "MoPub.h"
+@import AppCenter;
+@import AppCenterAnalytics;
+@import AppCenterCrashes;
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization:@"e799f7867d614fdd99a7917833e91643"];
+    MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization:@"1e3656f9129a4d888e78ab5f5da4979e"];
     [[MoPub sharedInstance]  initializeSdkWithConfiguration:sdkConfig completion:^{
         NSLog(@"SDK initialization complete");
     }];
+    [MSAppCenter start:@"3c8fbeff-5698-42d6-b107-214e8e38af35" withServices:@[
+      [MSAnalytics class],
+      [MSCrashes class]
+    ]];
     
     return YES;
 }

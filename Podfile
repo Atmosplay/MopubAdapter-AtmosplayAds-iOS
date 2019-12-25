@@ -3,12 +3,11 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 
 target 'PlayableMopubAd' do
-  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
-
-  # Pods for PlayableMopubAd
-  pod 'MoPub-AtmosplayAds-Adapters'
-
+  use_frameworks!
+  #pod 'MoPub-AtmosplayAds-Adapters'
+  pod "MoPub-AtmosplayAds-Adapters", :path => "./MoPub-AtmosplayAds-Adapters.podspec"
+  pod 'AppCenter'
+  
   target 'PlayableMopubAdTests' do
     inherit! :search_paths
     # Pods for testing

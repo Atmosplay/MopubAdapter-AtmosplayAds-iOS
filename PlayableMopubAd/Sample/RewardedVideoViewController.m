@@ -9,7 +9,7 @@
 #import "MoPub.h"
 #import "MPRewardedVideo.h"
 
-static NSString *videoPlacementID = @"e799f7867d614fdd99a7917833e91643";
+static NSString *videoPlacementID = @"c18e3a2830b74ee1be58bf79f3159d9a";
 
 @interface RewardedVideoViewController () <MPRewardedVideoDelegate>
 
