@@ -4,8 +4,8 @@ platform :ios, '9.0'
 
 target 'PlayableMopubAd' do
   use_frameworks!
-  #pod 'MoPub-AtmosplayAds-Adapters'
-  pod "MoPub-AtmosplayAds-Adapters", :path => "./MoPub-AtmosplayAds-Adapters.podspec"
+  pod 'MoPub-AtmosplayAds-Adapters'
+  # pod "MoPub-AtmosplayAds-Adapters", :path => "./MoPub-AtmosplayAds-Adapters.podspec"
   pod 'AppCenter'
   
   target 'PlayableMopubAdTests' do
